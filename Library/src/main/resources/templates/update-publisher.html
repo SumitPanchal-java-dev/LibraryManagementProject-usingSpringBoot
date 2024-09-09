@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Publisher</title>
+</head>
+<body>
+    <div th:include="fragment/header :: header"></div>
+    <h2>Update Publisher</h2>
+    <form th:action="@{/publishers/update}" method="post">
+        <input type="hidden" name="id" th:value="${publisher.id}">
+        <label for="name">Publisher Name:</label>
+        <input type="text" id="name" name="name" th:value="${publisher.name}" required>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" th:text="${publisher.address}" required></textarea>
+        <button type="submit">Update Publisher</button>
+    </form>
+</body>
+</html>

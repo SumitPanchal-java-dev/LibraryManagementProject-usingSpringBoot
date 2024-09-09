@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Author</title>
+</head>
+<body>
+    <div th:include="fragment/header :: header"></div>
+    <h2>Update Author</h2>
+    <form th:action="@{/authors/update}" method="post">
+        <input type="hidden" name="id" th:value="${author.id}">
+        <label for="name">Author Name:</label>
+        <input type="text" id="name" name="name" th:value="${author.name}" required>
+        <label for="bio">Biography:</label>
+        <textarea id="bio" name="bio" th:text="${author.bio}" required></textarea>
+        <button type="submit">Update Author</button>
+    </form>
+</body>
+</html>

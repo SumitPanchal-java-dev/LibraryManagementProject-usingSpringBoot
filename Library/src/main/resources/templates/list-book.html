@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Details</title>
+</head>
+<body>
+    <div th:include="fragment/header :: header"></div>
+    <h2>Book Details</h2>
+    <p>Title: <span th:text="${book.title}"></span></p>
+    <p>Author: <span th:text="${book.author.name}"></span></p>
+    <p>Category: <span th:text="${book.category.name}"></span></p>
+    <p>Publisher: <span th:text="${book.publisher.name}"></span></p>
+    <p>ISBN: <span th:text="${book.isbn}"></span></p>
+    <a th:href="@{/books}">Back to Books</a>
+</body>
+</html>

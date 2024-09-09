@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Author</title>
+</head>
+<body>
+    <div th:include="fragment/header :: header"></div>
+    <h2>Add New Author</h2>
+    <form th:action="@{/authors/add}" method="post">
+        <label for="name">Author Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="bio">Biography:</label>
+        <textarea id="bio" name="bio" required></textarea>
+        <button type="submit">Add Author</button>
+    </form>
+</body>
+</html>
